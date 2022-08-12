@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginScreen">
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.example.android.shadestoreinventory.LoginFragment"
+        android:label="@string/toolbar_title"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginScreen_to_welcomeScreen"
+            app:destination="@id/welcomeScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="com.example.android.shadestoreinventory.WelcomeScreen"
+        android:label="@string/toolbar_title"
+        tools:layout="@layout/fragment_welcome_screen">
+        <action
+            android:id="@+id/action_welcomeScreen_to_instructionFragment"
+            app:destination="@id/instructionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.example.android.shadestoreinventory.InstructionFragment"
+        android:label="@string/toolbar_title"
+        tools:layout="@layout/fragment_instruction">
+        <action
+            android:id="@+id/action_instructionFragment_to_shadeListFragment"
+            app:destination="@id/shadeListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/loginScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/shadeListFragment"
+        android:name="com.example.android.shadestoreinventory.ShadeListFragment"
+        android:label="@string/toolbar_title"
+        tools:layout="@layout/fragment_shade_list">
+        <action
+            android:id="@+id/action_shadeListFragment_to_addNew"
+            app:destination="@id/addNew"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="modelName"
+            app:argType="string" />
+        <argument
+            android:name="companyName"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="color"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_shadeListFragment_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:enterAnim="@anim/slide_in_down"
+            app:exitAnim="@anim/slide_out_up"
+            app:popUpTo="@id/navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNew"
+        android:name="com.example.android.shadestoreinventory.AddNew"
+        android:label="@string/toolbar_title"
+        tools:layout="@layout/fragment_add_new">
+        <action
+            android:id="@+id/action_addNew_to_shadeListFragment"
+            app:destination="@id/shadeListFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+</navigation>

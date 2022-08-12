@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Shade Store Inventory</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="toolbar_title">Shade store inventory</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">Logout</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign up</string>
+    <string name="insert_model_name">Insert model name here</string>
+    <string name="insert_company_name">Insert company name here</string>
+    <string name="insert_description">Here you can write a brief description</string>
+    <string name="insert_color">Insert color here</string>
+    <string name="add">Add</string>
+    <string name="back">Back</string>
+    <string name="welcome_message">This is the \"Shade store Inventory app\".\n\nWith this app you can mantain a list of all of your sunglasses, goggles etc. in the same place.\n\nYou can add new ones, set descriptions, color and manufacturer name.</string>
+    <string name="welcome2">You can tap the following button to navigate to the instructions screen</string>
+    <string name="button_description1">Button to navigate to instruction fragment</string>
+    <string name="description">In the main screen you will see the list of all the shades/glasses/goggles you own.\n\nYou an scroll the list and look for the item you want to see.\n\nYou can press de + button to add a new item to the list.</string>
+    <string name="instructions2">Tap the following button to go to the list.</string>
+</resources>
